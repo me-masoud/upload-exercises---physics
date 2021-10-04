@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>آپلود تمارین</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div>
+        <form action="./controller.php" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="email">آدرس ایمیل</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="ایمیل">
+                <small id="emailHelp" class="form-text text-muted">ادرس ایمیل خود را وارد کنید</small>
+            </div>
+
+            <div class="form-group">
+                <label for="studentName">نام دانشجو:</label>
+                <input type="text" name="studentName" class="form-control" id="studentName"  placeholder="نام خود را وارد کنید">
+                <small class="form-text text-muted">نام خود را وارد کنید به صورت کامل.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="studentNumber">شماره دانشجویی :</label>
+                <input type="number" class="form-control" id="studentNumber"  placeholder="شماره دانشجویی" name="studentNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="lessonCode">مشخصه درس :</label>
+                <input type="number" class="form-control" id="lessonCode"  placeholder="مشخصه درس" name="lessonCode">
+            </div>
+
+            <div class="form-group">
+                <label for="date">تاریخ :</label>
+                <input type="text" class="form-control" id="date"  placeholder="990825" name="date">
+            </div>
+
+            <div class="form-group">
+                <label for="type">نوع تمرین :</label>
+                <select class="form-control form-control-lg" id="type" name="type">
+                    <option value="th">تمرین خانه</option>
+                    <option value="ex">تمرین کلاسی</option>
+                </select>
+            </div>
+
+            <br>
+            <h3>نوع فایلی که میخواهید بفرستید:</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="fileType" id="pdf" value="pdf" checked>
+                <label class="form-check-label" for="pdf">
+                    pdf
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="fileType" id="image" value="image">
+                <label class="form-check-label" for="image">
+                    عکس
+                </label>
+            </div>
+            <h3>اگر فایل شما pdf هست:</h3>
+            <div class="form-group">
+                <label for="pdfFile">فایل مورد نظر(pdf)</label>
+                <input type="file" class="form-control-file" id="pdfFile" name="pdfFile">
+            </div>
+
+            <h3>اگر فایل های شما عکس هست:</h3>
+            <div class="form-group">
+                <label for="pdfFile">فایل اول:</label>
+                <input type="file" class="form-control-file" id="imgFile1" name="imgFile1">
+            </div>
+            <div class="form-group">
+                <label for="pdfFile">فایل دوم:</label>
+                <input type="file" class="form-control-file" id="imgFile2" name="imgFile2">
+            </div>
+            <div class="form-group">
+                <label for="pdfFile">فایل سوم:</label>
+                <input type="file" class="form-control-file" id="imgFile3" name="imgFile3">
+            </div>
+            <div class="form-group">
+                <label for="pdfFile">فایل چهارم:</label>
+                <input type="file" class="form-control-file" id="imgFile4" name="imgFile4">
+            </div>
+<!--            <div class="form-group">-->
+<!--                <label for="pdfFile">فایل پنجم:</label>-->
+<!--                <input type="file" class="form-control-file" id="imgFile5" name="imgFile5">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="pdfFile">فایل ششم:</label>-->
+<!--                <input type="file" class="form-control-file" id="imgFile6" name="imgFile6">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="pdfFile">فایل هفتم:</label>-->
+<!--                <input type="file" class="form-control-file" id="imgFile7" name="imgFile7">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="pdfFile">فایل هشتم:</label>-->
+<!--                <input type="file" class="form-control-file" id="imgFile8" name="imgFile8">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="pdfFile">فایل نهم:</label>-->
+<!--                <input type="file" class="form-control-file" id="imgFile9" name="imgFile9">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="pdfFile">فایل دهم:</label>-->
+<!--                <input type="file" class="form-control-file" id="imgFile10" name="imgFile10">-->
+<!--            </div>-->
+
+            <button type="submit" class="btn btn-primary">ثبت و ارسال</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
